@@ -1,42 +1,43 @@
+function animateCounter(id, start, end, duration) {
+  let obj = document.getElementById(id);
+  let range = end - start;
+  let stepTime = Math.abs(Math.floor(duration / range));
+  let startTime = new Date().getTime();
+  let endTime = startTime + duration;
+  let timer;
 
-// Counter Section
-let targetNumber1 = 99;
-let targetNumber2 = 149;
-let targetNumber3 = 4;
-let counter1 = 40;
-let counter2 = 100;
-let counter3 = 0;
-let counterElement1 = document.getElementById("counter_clients");
-let counterElement2 = document.getElementById("counter_deliveries");
-let counterElement3 = document.getElementById("counter_countries_covered");
-
-function incrementCounter1() {
-    counter1++;
-    counterElement1.textContent = counter1;
-
-    if (counter1 <= targetNumber1) {
-      setTimeout(incrementCounter1, 50);
-    }
+  function run() {
+      let now = new Date().getTime();
+      let remaining = Math.max((endTime - now) / duration, 0);
+      let value = Math.round(end - (remaining * range));
+      obj.innerHTML = value;
+      if (value == end) {
+          clearInterval(timer);
+      }
   }
 
-  function incrementCounter2() {
-    counter2++;
-    counterElement2.textContent = counter2;
+  timer = setInterval(run, stepTime);
+  run();
+}
 
-    if (counter2 <= targetNumber2) {
-      setTimeout(incrementCounter2, 50);
-    }
-  }
+// Initialize Intersection Observer
+const observer = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+      if (entry.isIntersecting) {
+          // Start counters when the section is in view
+          animateCounter('counter_clients', 0, 120, 2000);
+          animateCounter('counter_deliveries', 0, 200, 2000);
+          animateCounter('counter_countries_covered', 0, 6, 2000);
+          // Unobserve the section after animation starts
+          observer.unobserve(entry.target);
+      }
+  });
+}, {
+  threshold: 0.5 // Adjust threshold as needed
+});
 
-  function incrementCounter3() {
-    counter3++;
-    counterElement3.textContent = counter3;
-
-    if (counter3 <= targetNumber3) {
-      setTimeout(incrementCounter3, 500);
-    }
-  }
-
-incrementCounter1();
-incrementCounter2();
-incrementCounter3();
+// Observe the counter section
+document.addEventListener('DOMContentLoaded', function() {
+  const counterSection = document.getElementById('counter');
+  observer.observe(counterSection);
+});
