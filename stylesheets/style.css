@@ -421,7 +421,7 @@ header.sticky .menu{
 #hero_section{
     width: 100%;
     height: 100vh;
-    background-image: url(../assets/images/hero.jpg);
+    background-image: url(../assets/images/ethan-img-9.jpg);
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
@@ -855,7 +855,7 @@ header.sticky .menu{
 
 /* Counter Section */
 #counter{
-    background-image: url(../assets/images/img.png);
+    background-image: url(../assets/images/ethan-img-5.jpg);
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
@@ -1031,7 +1031,7 @@ header.sticky .menu{
 }
 
 .service_one{
-    background-image: url(../assets/images/img3.jpg);
+    background-image: url(../assets/images/ethan-img-2.jpg);
     background-position: center;
     background-size: cover;
     height: 300px;
@@ -1042,7 +1042,7 @@ header.sticky .menu{
 }
 
 .service_two{
-    background-image: url(../assets/images/img.png);
+    background-image: url(../assets/images/ethan-img-3.jpg);
     background-position: center;
     background-size: cover;
     height: 300px;
@@ -1053,7 +1053,7 @@ header.sticky .menu{
 }
 
 .service_three{
-    background-image: url(../assets/images/img2.jpg);
+    background-image: url(../assets/images/ethan-img-5.jpg);
     background-position: center;
     background-size: cover;
     height: 300px;
@@ -1225,7 +1225,7 @@ header.sticky .menu{
 #call_to_action{
     width: 100%;
     height: 70vh;
-    background-image: url(../assets/images/hero.jpg);
+    background-image: url(../assets/images/ethan-img-7.jpg);
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
