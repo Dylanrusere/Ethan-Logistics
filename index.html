@@ -6,6 +6,7 @@
     <title>Ethan Logistics</title>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="icon" type="image/png" href="./assets/images/ethan_logistics_title_logo.png" />
     <link rel="stylesheet" href="./stylesheets/style.css">
 </head>
@@ -62,13 +63,15 @@
      <section id="hero_section">
             <div class="hero_overlay">
                 <div class="hero_overall_container">
-                    <p class="welcome_text">Welcome to Ethan Logistics Website</p>
-                    <p class="tag_line">Logistics Made <br><span>Easy</span></p>
-                    <p class="brief_detail_hero">Join the countless businesses that trust Ethan 
+                    <p class="welcome_text" data-aos="slide-down" data-aos-duration="2000">Welcome to Ethan Logistics Website</p>
+                    <p class="tag_line" data-aos="fade-right" data-aos-duration="2000">Logistics Made <br><span data-aos="fade-right" data-aos-duration="2500">Easy</span></p>
+                    <p class="brief_detail_hero" data-aos="fade-right" data-aos-duration="3000">Join the countless businesses that trust Ethan 
                         Logistics to handle their logistics with precision and care. Experience 
                         the difference of working with a partner who puts your needs first and makes 
                         logistics as seamless as it should be. <br><br>Welcome aboard! Let’s make logistics easy together.</p>
-                    <button onclick="window.location.href='about.html';" class="overall_btn home_btn">Get Started<i class="fa-solid fa-arrow-up-right-from-square right_arrow"></i></button>
+                    <button onclick="window.location.href='about.html';" class="overall_btn home_btn" data-aos="fade-right" data-aos-duration="2500">
+                        Get Started<i class="fa-solid fa-arrow-up-right-from-square right_arrow"></i>
+                    </button>
                 </div>
             </div>
      </section>
@@ -89,26 +92,23 @@
                     <div class="about_content">
                         <p class="about_head">ABOUT ETHAN LOGISTICS</p>
                         <p class="perfect_company">Perfect Company with <br>Perfect Solutions</p>
-                        <p class="about_content_par">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                            Mollitia omnis culpa eos sapiente numquam non hic dolorum facere accusamus laudantium
-                             voluptates, facilis rem laborum, ea voluptatibus quia quo dolor blanditiis! <br> <br>
-                             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit natus vero blanditiis 
-                             dicta nesciunt, accusantium placeat accusamus veniam sapiente, itaque mollitia beatae et, 
-                             nulla modi sit eos quos saepe ipsa.
+                        <p class="about_content_par"> Ethan Logistics is committed to providing leading haulage and logistics services throughout the region 
+                            of Southern Africa. With a thorough understanding of the volatile nature of this industry, we are keen to 
+                            providing solutions that reduces delays and losses by so doing adding value to your business efficiency.
                             </p>
                         
                         <div class="services_about">
                             <div class="worldwide_service service_about">
                                 <i class="fa-solid fa-earth-americas"></i>
                                 <div class="service_about_content">
-                                    <p class="service_about_head">Worldwide Service</p>
+                                    <p class="service_about_head">Long Distance Haulage</p>
                                     <p class="service_about_par">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt mollitia impedit.</p>
                                 </div>
                             </div>
                             <div class="local_service service_about">
                                 <i class="fa-solid fa-earth-africa"></i>
                                 <div class="service_about_content">
-                                    <p class="service_about_head">Local Service</p>
+                                    <p class="service_about_head">Short Distance Haulage</p>
                                     <p class="service_about_par">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt mollitia impedit.</p>
                                 </div>
                             </div>
@@ -174,9 +174,10 @@
                 <div class="head_service_container">
                     <div class="head_service_content">
                         <p class="head_service_head">EXPLORE OUR <span>SERVICES</span></p>
-                        <p class="head_service_par">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique atque, nisi 
-                            adipisci minima exercitationem tempore iusto quasi nostrum repudiandae accusantium 
-                            culpa rerum cumque praesentium non aliquam consequatur suscipit nulla ducimus.</p>
+                        <p class="head_service_par">We specialise in the transportation of a variety of loose and packed goods throughout the Southern 
+                            Africa region. We are moved by our core values of transparency, integrity, customer satisfaction 
+                            and professionalism to successfully move your business through the challenges facing the transport 
+                            industry of today. </p>
                     </div>
                     <div class="head_service_button">
                         <button onclick="window.location.href='services.html';" class="services_btn">Explore More<i class="fa-solid fa-arrow-up-right-from-square services_right_arrow"></i></button>
@@ -186,40 +187,74 @@
                 <div class="services_cards_grid_container">
                     <div class="service_one service">
                         <div class="color_bg_one">
-                            <i class="fa-solid fa-truck"></i>
-                            <p class="service_card_head_two">Land Transport</p>
-                            <p class="service_brief_detail_two">Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-                                Quo temporibus dolorum fuga. Eius qui.</p>
+                            <img src="./assets/images/citizenship.png" alt="">
+                            <p class="service_card_head_two">National Transportation</p>
+                            <p class="service_brief_detail_two">Efficient domestic freight services, moving goods safely and swiftly across the nation.</p>
                             <ul>
-                                <li>Delivery On Time</li>
-                                <li>Delivery On Time</li>
-                                <li>Delivery On Time</li>
+                                <li>Efficient</li>
+                                <li>Nationwide</li>
+                                <li>Reliable</li>
                             </ul>
                         </div>
                     </div>
                     <div class="service_two service">
                         <div class="color_bg_two">
-                            <i class="fa-solid fa-truck"></i>
-                            <p class="service_card_head_two">Land Transport</p>
-                            <p class="service_brief_detail_two">Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-                                Quo temporibus dolorum fuga. Eius qui.</p>
+                            <img src="./assets/images/abord.png" alt="">
+                            <p class="service_card_head_two">Cross Border Transport</p>
+                            <p class="service_brief_detail_two">Reliable international logistics, ensuring seamless delivery of goods between countries with customs expertise.</p>
                             <ul>
-                                <li>Delivery On Time</li>
-                                <li>Delivery On Time</li>
-                                <li>Delivery On Time</li>
+                                <li>International</li>
+                                <li>Seamless</li>
+                                <li>Compliant</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="service_three service">
+                        <div class="color_bg_three">
+                            <img src="./assets/images/delivery-truck.png" alt="">
+                            <p class="service_card_head_three">Short Distance Haulage</p>
+                            <p class="service_brief_detail_three">Quick and affordable local transport solutions for short routes, perfect for timely deliveries.</p>
+                            <ul>
+                                <li>Quick</li>
+                                <li>Affordable</li>
+                                <li>Flexible</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="service_three service">
+                        <div class="color_bg_three">
+                            <img src="./assets/images/vehicle.png" alt="">
+                            <p class="service_card_head_three">Long Distance Haulage</p>
+                            <p class="service_brief_detail_three">Comprehensive logistics services for transporting goods over long distances, ensuring safe and timely arrival.</p>
+                            <ul>
+                                <li>Comprehensive</li>
+                                <li>Secure</li>
+                                <li>Timely</li>
                             </ul>
                         </div>
                     </div>
                     <div class="service_three service">
                         <div class="color_bg_three">
                             <i class="fa-solid fa-truck"></i>
-                            <p class="service_card_head_three">Land Transport</p>
+                            <p class="service_card_head_three">Taut Liners</p>
+                            <p class="service_brief_detail_three">Versatile trailers with retractable curtains, ideal for transporting palletized goods securely and efficiently.</p>
+                            <ul>
+                                <li>Versatile</li>
+                                <li>Secure</li>
+                                <li>Efficient</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="service_three service">
+                        <div class="color_bg_three">
+                            <i class="fa-solid fa-truck"></i>
+                            <p class="service_card_head_three">Short Distance Haulage</p>
                             <p class="service_brief_detail_three">Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
                                 Quo temporibus dolorum fuga. Eius qui.</p>
                             <ul>
-                                <li>Delivery On Time</li>
-                                <li>Delivery On Time</li>
-                                <li>Delivery On Time</li>
+                                <li>Quick</li>
+                                <li>Quick</li>
+                                <li>Quick</li>
                             </ul>
                         </div>
                     </div>
@@ -227,13 +262,20 @@
             </div>
          </section>
 
-         <!-- Call To Action -->
-          <section id="call_to_action">
-                <div class="overlay_call_to_action">
-                    <div class="overall_container">
-                        <div class="call_to_action_content">
-                            <p class="call_to_action_head">Ethan Logistics has your needs covered!</p>
-                            <button onclick="window.location.href='services.html';" class="call_to_action_btn">Contact Us<i class="fa-solid fa-arrow-up-right-from-square call_to_action_right_arrow"></i></button>
+         <!-- Why Choose Us -->
+          <section id="why_choose_us">
+                <div class="why_grid_container">
+                    <div class="why_img">
+                            <img src="./assets/images/mission.png" alt="">
+                    </div>
+                    <div class="why_text">
+                        <div class="why_text_container">
+                            <p class="why_text_head">Why Choose Us?</p>
+                            <div class="reason_wrapper"><i class="fa-solid fa-square-check"></i><p class="reasons">We are reliable</p></div>
+                            <div class="reason_wrapper"><i class="fa-solid fa-square-check"></i><p class="reasons">We are passionate about what we do</p></div>
+                            <div class="reason_wrapper"><i class="fa-solid fa-square-check"></i><p class="reasons">We have a good reputation</p></div>
+                            <div class="reason_wrapper"><i class="fa-solid fa-square-check"></i><p class="reasons">We are concerned about safety</p></div>
+                            <div class="reason_wrapper"><i class="fa-solid fa-square-check"></i><p class="reasons">We have excellent staff and facilities</p></div>
                         </div>
                     </div>
                 </div>
@@ -321,8 +363,20 @@
                 </div>
            </section>
 
+         <!-- Call To Action -->
+          <section id="call_to_action">
+                <div class="overlay_call_to_action">
+                    <div class="overall_container">
+                        <div class="call_to_action_content">
+                            <p class="call_to_action_head">Ethan Logistics has your needs covered!</p>
+                            <button onclick="window.location.href='services.html';" class="call_to_action_btn">Contact Us<i class="fa-solid fa-arrow-up-right-from-square call_to_action_right_arrow"></i></button>
+                        </div>
+                    </div>
+                </div>
+          </section>
+
            <!-- Contact Section -->
-            <section id="conact_section">
+            <section id="contact_section">
                 <div class="overall_container">
                     <div class="contact_grid_container">
                         <div class="contact_details">
@@ -373,7 +427,10 @@
 
 
 
-
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+         AOS.init();
+    </script>
     <script src="./javascripts/testimonials.js"></script>
     <script src="./javascripts/counter.js"></script>
     <script src="./javascripts/main.js"></script>

@@ -51,6 +51,10 @@
 .header_top_container{
     background-color: #10243C;
     padding: 1% 0;
+
+    @media(max-width:330px){
+        display: none;
+    }
 }
 
 .header_top{
@@ -152,7 +156,8 @@ header{
     }
 
     @media(max-width:330px){
-        height: 70px;
+        height: 60px;
+        justify-content: center;
     }
 
     /* @media(max-width:1000px){
@@ -688,6 +693,10 @@ header.sticky .menu{
     justify-content: center;
 }
 
+.service_about_head{
+    font-weight: 600;
+}
+
 .about_head{
     color: #3276B7;
     font-weight: 700;
@@ -936,8 +945,32 @@ header.sticky .menu{
 #services{
     padding: 5% 0;
 
+    @media(max-width:900px){
+        padding: 5% 0 15% 0;
+    }
+
+    @media(max-width:600px){
+        padding: 5% 0 35% 0;
+    }
+
+    @media(max-width:540px){
+        padding: 5% 0 45% 0;
+    }
+
     @media(max-width:450px){
-        padding-top: 10%;
+        padding: 10% 0 55% 0;
+    }
+
+    @media(max-width:360px){
+        padding: 10% 0 65% 0;
+    }
+
+    @media(max-width:330px){
+        padding: 10% 0 75% 0;
+    }
+
+    @media(max-width:290px){
+        padding: 10% 0 85% 0;
     }
 }
 
@@ -1017,12 +1050,13 @@ header.sticky .menu{
     gap: 3%;
     margin: 5% 10% 0 10%;
 
-    @media(max-width:870px){
+    @media(max-width:900px){
         grid-template-columns: repeat(2, 1fr);
     }
 
     @media(max-width:600px){
         grid-template-columns: 1fr;
+        gap: 1%;
     }
 
     @media(max-width:530px){
@@ -1036,9 +1070,17 @@ header.sticky .menu{
     background-size: cover;
     height: 300px;
 
-    @media(max-width:445px){
-        height: 250px;
+    @media(max-width:950px){
+        height: 350px;
     }
+
+    @media(max-width:760px){
+        height: 300px;
+    }
+
+    /* @media(max-width:445px){
+        height: 250px;
+    } */
 }
 
 .service_two{
@@ -1047,9 +1089,17 @@ header.sticky .menu{
     background-size: cover;
     height: 300px;
 
-    @media(max-width:445px){
-        height: 250px;
+    @media(max-width:950px){
+        height: 350px;
     }
+
+    @media(max-width:760px){
+        height: 300px;
+    }
+
+    /* @media(max-width:445px){
+        height: 250px;
+    } */
 }
 
 .service_three{
@@ -1058,36 +1108,40 @@ header.sticky .menu{
     background-size: cover;
     height: 300px;
 
-    @media(max-width:870px){
-        width: 205%;
+    @media(max-width:950px){
+        height: 350px;
     }
 
-    @media(max-width:600px){
-        width: 100%;
+    @media(max-width:760px){
+        height: 300px;
     }
 
-    @media(max-width:445px){
+    /* @media(max-width:445px){
         height: 250px;
-    }
+    } */
 }
 
 .color_bg_one{
-    padding: 12% 8%;
+    padding: 8% 8%;
     height: 300px;
     background-color: #10243C;
     transition: 0.5s ease-in-out;
     color: #ffffff;
 
-    @media(max-width:600px){
-        padding: 5% 8%;
+    @media(max-width:950px){
+        height: 350px;
     }
 
-    @media(max-width:445px){
+    @media(max-width:760px){
+        height: 300px;
+    }
+
+    /* @media(max-width:445px){
         height: 250px;
-    }
+    } */
 
-    i{
-        font-size: 20px;
+    img{
+        width: 40px;
     }
 
     ul{
@@ -1105,22 +1159,30 @@ header.sticky .menu{
 }
 
 .color_bg_two{
-    padding: 12% 8%;
+    padding: 8% 8%;
     height: 300px;
     background-color: #10243C;
     transition: 0.5s ease-in-out;
     color: #ffffff;
 
-    @media(max-width:600px){
-        padding: 5% 8%;
+    @media(max-width:950px){
+        height: 350px;
     }
 
-    @media(max-width:445px){
+    @media(max-width:760px){
+        height: 300px;
+    }
+
+    /* @media(max-width:445px){
         height: 250px;
+    } */
+
+    img{
+        width: 40px;
     }
 
     i{
-        font-size: 20px;
+        font-size:20px;
     }
 
     ul{
@@ -1138,22 +1200,26 @@ header.sticky .menu{
 }
 
 .color_bg_three{
-    padding: 12% 8%;
+    padding: 8% 8%;
     height: 300px;
     background-color: #10243C;
     transition: 0.5s ease-in-out;
     color: #ffffff;
 
-    @media(max-width:870px){
-        padding: 5% 8%;
+    @media(max-width:950px){
+        height: 350px;
     }
 
-    @media(max-width:445px){
+    @media(max-width:760px){
+        height: 300px;
+    }
+
+    /* @media(max-width:445px){
         height: 250px;
-    }
+    } */
 
-    i{
-        font-size: 20px;
+    img{
+        width: 40px;
     }
 
     ul{
@@ -1220,6 +1286,72 @@ header.sticky .menu{
         margin-top: 7%;
     }
 }
+
+/* Why Choose Us */
+#why_choose_us{
+    margin-top: 5%;
+}
+
+.why_grid_container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    @media(max-width:660px){
+        grid-template-columns: 1fr;
+    }
+}
+
+.why_img{
+    width: 100%;
+
+    img{
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.why_text{
+    background-color: #10243C;
+    padding: 3% 5%;
+
+    @media(max-width:660px){
+        padding: 8% 5%;
+    }
+}
+
+
+.why_text_head{
+    color: #3276B7;
+    font-weight: 600;
+    font-size: 30px;
+
+    @media(max-width:420px){
+        font-size: 25px;
+    }
+}
+
+.reason_wrapper{
+    display: flex;
+    align-items: center;
+    margin-top: 3%;
+
+    @media(max-width:960px){
+        margin-top: 2%;
+    }
+
+
+    i{
+        color: #3276B7;
+        font-size: 20px;
+    }
+}
+
+.reasons{
+    color: #ffffff;
+    margin-left: 1%;
+}
+
+
 
 /* Call To Action */
 #call_to_action{
@@ -1473,6 +1605,11 @@ header.sticky .menu{
 }
 
 /* Contact Section */
+#contact_section{
+    margin-top: 5%;
+}
+
+
 .contact_grid_container{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -1786,6 +1923,10 @@ footer{
     grid-template-columns: repeat(2, 1fr);
     gap: 5%;
     margin-top: 5%;
+
+    @media(max-width:400px){
+        grid-template-columns: 1fr;
+    }
 }
 
 .local_service_about, .worldwide_service_about{
