@@ -1805,6 +1805,7 @@ header.sticky .menu{
 }
 
 .submit_btn{
+    cursor: pointer;
     margin-top: 5%;
     padding: 2% 2%;
     border: none;
@@ -1815,7 +1816,9 @@ header.sticky .menu{
 }
 
 .submit_btn:hover{
-    background-color: #3276B7;
+    background-color: transparent;
+    border: 1px solid #10243C;
+    color: #10243C;
 }
 
 /* Footer */
