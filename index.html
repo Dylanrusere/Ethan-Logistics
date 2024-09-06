@@ -21,7 +21,7 @@
             <div class="header_top">
                <div class="top_contact_container">
                     <a href="mailto:info@ethanlogistics.co.zw" class="top_email"><i class="fa-solid fa-envelope"></i> info@ethanlogistics.co.zw</a>
-                    <a href="https://maps.app.goo.gl/ysZVMwtmTYQs4Kiq8" class="top_location"><i class="fa-solid fa-location-dot"></i> 70 Marlveen, Waterfalls, Hre</a>
+                    <a href="https://maps.app.goo.gl/axjQ9iY7fEoSoxUB6" class="top_location"><i class="fa-solid fa-location-dot"></i> 512 Marlveen, Hre</a>
                     <p class="top_hours"><i class="fa-solid fa-clock"></i> Mon - Fri 08:00 - 17:00</p>
                </div>
                <div class="top_links">
@@ -36,7 +36,8 @@
                     <li><a href="./index.html" class="active_nav">Home</a></li>
                     <li><a href="./about.html">About Us</a></li>
                     <li><a href="./services.html">Services</a></li>
-                    <li><a href="#contact_section">Contact Us</a></li>
+                    <li><a href="./contact.html">Contact Us</a></li>
+                    <li><button class="quote_btn">Get A Quote</button></li>
                 </ul>
                 <!-- Off Screen Menu -->
                  <div class="offScreenMenu">
@@ -47,7 +48,9 @@
                         &nbsp;
                         <li><a href="./services.html">Services</a></li>
                         &nbsp;
-                        <li><a href="#contact_section">Contact</a></li>
+                        <li><a href="./contact.html">Contact</a></li>
+                        &nbsp;
+                        <li><button class="quote_btn_ham">Get A Quote</button></li>
                     </ul>
                  </div>
                 <!-- Ham Menu Icon-->
@@ -58,6 +61,32 @@
                 </div>
         </div>
     </header>
+
+    <!-- Pop-up form -->
+    <div id="quoteForm" class="popup_form" data-aos="fade-down" data-aos-duration="2000">
+        <div class="popup_content">
+            <span class="close_btn">&times;</span>
+            <h2>Get A Quote</h2>
+            <form action="/submit_quote" method="post">
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+                
+                <!-- Dropdown selection input -->
+                <select id="service" name="service" required>
+                    <option value="" disabled selected>Select a Service</option>
+                    <option value="national">National Transportation </option>
+                    <option value="cross">Cross Border Transport</option>
+                    <option value="short">Short Distance Haulage</option>
+                    <option value="long">Long Distance Haulage</option>
+                    <option value="taut">Taut Liners</option>
+                    <option value="specific">Specific Inquiry</option>
+                </select>
+                
+                <textarea id="message" name="message" placeholder="Your Message" rows="4" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
     
     <!-- Hero Section -->
      <section id="hero_section">
@@ -375,52 +404,56 @@
                 </div>
           </section>
 
-           <!-- Contact Section -->
-            <section id="contact_section">
-                <div class="overall_container">
-                    <div class="contact_grid_container">
-                        <div class="contact_details">
-                            <p class="contact_head">GET IN TOUCH</p>
-                            <p class="email"><a href=""><i class="fa-solid fa-envelope"></i> info@ethanlogistics.co.zw</a></p>
-                            <p class="address"><a href=""><i class="fa-solid fa-location-dot"></i> 77 Marlveen Waterfalls, Hre</a></p>
-                            <p class="phone"><i class="fa-solid fa-phone"></i> +263 78 300 2822</p>
-                            <div class="social_media_platforms">
-                                <a href=""><i class="fa-brands fa-square-facebook"></i></a>
-                                <a href=""><i class="fa-brands fa-square-instagram"></i></a>
-                            </div>
-                        </div>
-                        <div class="form_container">
-                            <form id="contact_form" class="form">
-                                <input type="text" id="name" placeholder="Your Name" required>
-                                <input type="email" id="email" placeholder="Your Email" required>
-                                <textarea id="message" placeholder="Your Message" rows="6" required></textarea>
-                                <button type="submit" class="submit_btn">Submit</button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </section>
+          <!-- Contact Section -->
+          <section id="contact_section">
+              <div class="overall_container">
+                  <div class="contact_grid_container contact_section_services_page">
+                      <div class="contact_details">
+                          <p class="contact_head">GET IN TOUCH</p>
+                          <p class="email"><a href=""><i class="fa-solid fa-envelope"></i> info@ethanlogistics.co.zw</a></p>
+                          <p class="address"><a href=""><i class="fa-solid fa-location-dot"></i> 77 Marlveen Waterfalls, Hre</a></p>
+                          <p class="address"><a href=""><i class="fa-solid fa-location-dot"></i>  4 Padyn Freeway Boksburg, Johannesburg, RSA</a></p>
+                          <p class="phone"><i class="fa-solid fa-phone"></i> +263 78 300 2822</p>
+                          <div class="social_media_platforms">
+                              <a href=""><i class="fa-brands fa-square-facebook"></i></a>
+                              <a href=""><i class="fa-brands fa-square-instagram"></i></a>
+                          </div>
+                      </div>
+                      <div class="form_container">
+                          <form id="contact_form" class="form">
+                              <input type="text" id="name" placeholder="Your Name" required>
+                              <input type="email" id="email" placeholder="Your Email" required>
+                              <textarea id="message" placeholder="Your Message" rows="6" required></textarea>
+                              <button type="submit" class="submit_btn">Submit</button>
+                          </form>
+                      </div>
+                  </div>
+              </div>
+          </section>
 
             <footer>
                 <div class="overall_container">
-                    <div class="footer_social_platforms">
-                        <a href=""><i class="fa-brands fa-square-facebook"></i></a>
-                        <a href=""><i class="fa-brands fa-square-instagram"></i></a>
-                    </div>
                     <div class="footer_links_container">
                         <div class="logo">
                             <a href="./index.html"><img class="logo_img" src="./assets/images/footer_logo.png" alt="Our Logo"></a>
+                            <p class="footer_company_details">Ethan Logistics is committed to providing leading haulage and logistics services throughout the region 
+                                of Southern Africa.</p>
                         </div>
                         <div class="footer_services">
-                            <a href="">Local Moving</a>
-                            <a href="">Land Transport</a>
-                            <a href="">Local Moving</a>
-                            <a href="">Land Transport</a>
+                            <a href="./services.html">National Transportation </a>
+                            <a href="./services.html">Cross Border Transport</a>
+                            <a href="./services.html">Short Distance Haulage</a>
+                            <a href="./services.html">Long Distance Haulage</a>
+                            <a href="./services.html">Taut Liners</a>
                         </div>
                         <div class="footer_about">
-                            <a href="">About Us</a>
-                            <a href="">Contact</a>
+                            <a href="./about.html">About Us</a>
+                            <a href="./contact.html">Contact</a>
                         </div>
+                    </div>
+                    <div class="footer_social_platforms">
+                        <a href=""><i class="fa-brands fa-square-facebook"></i></a>
+                        <a href=""><i class="fa-brands fa-square-instagram"></i></a>
                     </div>
                 </div>
             </footer>

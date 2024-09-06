@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services | Ethan Logistics</title>
+    <title>Our Services | Ethan Logistics</title>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
@@ -36,7 +36,8 @@
                     <li><a href="./index.html">Home</a></li>
                     <li><a href="./about.html">About Us</a></li>
                     <li><a href="./services.html" class="active_nav">Services</a></li>
-                    <li><a href="#contact_section">Contact Us</a></li>
+                    <li><a href="./contact.html">Contact Us</a></li>
+                    <li><button class="quote_btn">Get A Quote</button></li>
                 </ul>
                 <!-- Off Screen Menu -->
                  <div class="offScreenMenu">
@@ -47,7 +48,9 @@
                         &nbsp;
                         <li><a href="./services.html" class="active_nav_ham">Services</a></li>
                         &nbsp;
-                        <li><a href="#contact_section">Contact</a></li>
+                        <li><a href="./contact.html">Contact</a></li>
+                        &nbsp;
+                        <li><button class="quote_btn_ham">Get A Quote</button></li>
                     </ul>
                  </div>
                 <!-- Ham Menu Icon-->
@@ -58,6 +61,32 @@
                 </div>
         </div>
     </header>
+
+    <!-- Pop-up form -->
+    <div id="quoteForm" class="popup_form" data-aos="fade-down" data-aos-duration="2000">
+        <div class="popup_content">
+            <span class="close_btn">&times;</span>
+            <h2>Get A Quote</h2>
+            <form action="/submit_quote" method="post">
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+                
+                <!-- Dropdown selection input -->
+                <select id="service" name="service" required>
+                    <option value="" disabled selected>Select a Service</option>
+                    <option value="national">National Transportation </option>
+                    <option value="cross">Cross Border Transport</option>
+                    <option value="short">Short Distance Haulage</option>
+                    <option value="long">Long Distance Haulage</option>
+                    <option value="taut">Taut Liners</option>
+                    <option value="specific">Specific Inquiry</option>
+                </select>
+                
+                <textarea id="message" name="message" placeholder="Your Message" rows="4" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
     
     <!-- Hero Section -->
      <section id="hero_section">
@@ -65,10 +94,7 @@
                 <div class="hero_overall_container">
                     <p class="welcome_text">Welcome to Ethan Logistics Website</p>
                     <p class="tag_line">Our<br><span>Services</span></p>
-                    <p class="brief_detail_hero">At Ethan Logistics, we offer a comprehensive range of logistics 
-                        solutions designed to simplify and enhance your supply chain operations. Our goal is 
-                        to provide you with seamless and efficient services that meet your unique needs, 
-                        ensuring that your logistics processes are smooth and hassle-free.</p>
+                    <p class="brief_detail_hero">We specialise in the transportation of a variety of loose and packed goods throughout the Southern Africa region. We are moved by our core values of transparency, integrity, customer satisfaction and professionalism to successfully move your business through the challenges facing the transport industry of today.</p>
                 </div>
             </div>
      </section>
@@ -78,41 +104,55 @@
         <div class="overall_container">
             <div class="first_service_grid">
                 <div class="service_service_one">
-                    <p class="service_one_head">1. Land Transport</p>
-                    <p class="service_one_description">Lorem ipsum dolor sit, amet consectetur 
-                        adipisicing elit. Maxime sapiente, nostrum sit fugit perferendis commodi 
-                        minima reprehenderit obcaecati dolore in facilis voluptatem tenetur atque, 
-                        reiciendis facere necessitatibus expedita dolor sint.</p>
+                    <p class="service_one_head">1. National Transportation</p>
+                    <p class="service_one_description">We specialize in reliable national transportation, offering seamless movement of goods across the country. Our modern fleet ensures safe and timely delivery for businesses of all sizes, connecting suppliers to customers efficiently. We prioritize the logistics needs of various industries, ensuring that goods are delivered swiftly, from city centers to rural areas, with top-notch service.</p>
                 </div>
                 <div class="service_one_img">
-                    <img src="./assets/images/img2.jpg" alt="">
+                    <img src="./assets/images/ethan-img-2.jpg" alt="">
                 </div>
             </div>
             <div class="second_service_grid">
                 <div class="service_two_img to_be_none">
-                    <img src="./assets/images/img2.jpg" alt="">
+                    <img src="./assets/images/ethan-img-3.jpg" alt="">
                 </div>
                 <div class="service_service_two">
-                    <p class="service_two_head">2. Land Transport</p>
-                    <p class="service_two_description">Lorem ipsum dolor sit, amet consectetur 
-                        adipisicing elit. Maxime sapiente, nostrum sit fugit perferendis commodi 
-                        minima reprehenderit obcaecati dolore in facilis voluptatem tenetur atque, 
-                        reiciendis facere necessitatibus expedita dolor sint.</p>
+                    <p class="service_two_head">2. Cross Border Transport</p>
+                    <p class="service_two_description">We provide cross-border transport services, expertly handling the complexities of international trade. We ensure that goods move across borders smoothly, with a strong focus on compliance, customs documentation, and security. Our cross-border solutions guarantee timely deliveries to neighboring countries, supporting businesses in expanding their reach and simplifying global trade processes.</p>
                 </div>
                 <div class="service_two_img none">
-                    <img src="./assets/images/img2.jpg" alt="">
+                    <img src="./assets/images/ethan-img-3.jpg" alt="">
                 </div>
             </div>
             <div class="third_service_grid">
                 <div class="service_service_three">
-                    <p class="service_three_head">3. Land Transport</p>
-                    <p class="service_three_description">Lorem ipsum dolor sit, amet consectetur 
-                        adipisicing elit. Maxime sapiente, nostrum sit fugit perferendis commodi 
-                        minima reprehenderit obcaecati dolore in facilis voluptatem tenetur atque, 
-                        reiciendis facere necessitatibus expedita dolor sint.</p>
+                    <p class="service_three_head">3. Short Distance Haulage</p>
+                    <p class="service_three_description">We also offer short-distance haulage services offer swift, efficient transport for goods within local or regional areas. Perfect for businesses needing quick deliveries, we ensure reliable transport for last-mile logistics, construction materials, and daily operations. Our fleet is equipped to handle short routes with speed and precision, meeting your local business needs.</p>
                 </div>
                 <div class="service_three_img">
-                    <img src="./assets/images/img2.jpg" alt="">
+                    <img src="./assets/images/ethan-img-7.jpg" alt="">
+                </div>
+            </div>
+            
+            <div class="second_service_grid">
+                <div class="service_two_img to_be_none">
+                    <img src="./assets/images/ethan-img-3.jpg" alt="">
+                </div>
+                <div class="service_service_two">
+                    <p class="service_two_head">4. Long Distance Haulage</p>
+                    <p class="service_two_description">We provide dependable long-distance haulage services, ideal for businesses requiring large-scale transport across extended routes. We specialize in moving goods safely and efficiently between cities or states, ensuring timely deliveries of bulk shipments. Our long-distance haulage is perfect for manufacturers, distributors, and retailers, guaranteeing secure and cost-effective logistics.</p>
+                </div>
+                <div class="service_two_img none">
+                    <img src="./assets/images/ethan-img-3.jpg" alt="">
+                </div>
+            </div>
+            
+            <div class="third_service_grid">
+                <div class="service_service_three">
+                    <p class="service_three_head">5. Taut Liners</p>
+                    <p class="service_three_description">We offer taut liner services, utilizing curtain-sided trucks for flexible and efficient transport. Our taut liners are designed for easy loading and unloading, making them ideal for transporting diverse cargo types such as pallets, crates, and oversized goods. This solution ensures quick operations while maintaining the safety and integrity of your goods during transit.</p>
+                </div>
+                <div class="service_three_img">
+                    <img src="./assets/images/ethan-img-2.jpg" alt="">
                 </div>
             </div>
         </div>
@@ -175,6 +215,7 @@
                     <p class="contact_head">GET IN TOUCH</p>
                     <p class="email"><a href=""><i class="fa-solid fa-envelope"></i> info@ethanlogistics.co.zw</a></p>
                     <p class="address"><a href=""><i class="fa-solid fa-location-dot"></i> 77 Marlveen Waterfalls, Hre</a></p>
+                    <p class="address"><a href=""><i class="fa-solid fa-location-dot"></i>  4 Padyn Freeway Boksburg, Johannesburg, RSA</a></p>
                     <p class="phone"><i class="fa-solid fa-phone"></i> +263 78 300 2822</p>
                     <div class="social_media_platforms">
                         <a href=""><i class="fa-brands fa-square-facebook"></i></a>
@@ -195,24 +236,27 @@
 
     <footer>
         <div class="overall_container">
+            <div class="footer_links_container">
+                <div class="logo">
+                    <a href="./index.html"><img class="logo_img" src="./assets/images/footer_logo.png" alt="Our Logo"></a>
+                    <p class="footer_company_details">Ethan Logistics is committed to providing leading haulage and logistics services throughout the region 
+                        of Southern Africa.</p>
+                </div>
+                <div class="footer_services">
+                    <a href="./services.html">National Transportation </a>
+                    <a href="./services.html">Cross Border Transport</a>
+                    <a href="./services.html">Short Distance Haulage</a>
+                    <a href="./services.html">Long Distance Haulage</a>
+                    <a href="./services.html">Taut Liners</a>
+                </div>
+                <div class="footer_about">
+                    <a href="./about.html">About Us</a>
+                    <a href="./contact.html">Contact</a>
+                </div>
+            </div>
             <div class="footer_social_platforms">
                 <a href=""><i class="fa-brands fa-square-facebook"></i></a>
                 <a href=""><i class="fa-brands fa-square-instagram"></i></a>
-            </div>
-            <div class="footer_links_container">
-                <div class="logo">
-                    <a href="./index.html"><img class="logo_img_footer" src="./assets/images/footer_logo.png" alt="Our Logo"></a>
-                </div>
-                <div class="footer_services">
-                    <a href="">Local Moving</a>
-                    <a href="">Land Transport</a>
-                    <a href="">Local Moving</a>
-                    <a href="">Land Transport</a>
-                </div>
-                <div class="footer_about">
-                    <a href="">About Us</a>
-                    <a href="">Contact</a>
-                </div>
             </div>
         </div>
     </footer>

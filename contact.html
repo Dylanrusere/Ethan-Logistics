@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Ethan Logistics</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="icon" type="image/png" href="./assets/images/ethan_logistics_title_logo.png" />
+    <link rel="stylesheet" href="./stylesheets/style.css">
+</head>
+<body>
+    <!-- Pre-Loader -->
+    <div class="preloader"></div>
+    
+    <!-- Navigation Bar -->
+    <header>
+        <!-- Header Top -->
+        <div class="header_top_container">
+            <div class="header_top">
+               <div class="top_contact_container">
+                    <a href="mailto:info@ethanlogistics.co.zw" class="top_email"><i class="fa-solid fa-envelope"></i> info@ethanlogistics.co.zw</a>
+                    <a href="https://maps.app.goo.gl/ysZVMwtmTYQs4Kiq8" class="top_location"><i class="fa-solid fa-location-dot"></i> 70 Marlveen, Waterfalls, Hre</a>
+                    <p class="top_hours"><i class="fa-solid fa-clock"></i> Mon - Fri 08:00 - 17:00</p>
+               </div>
+               <div class="top_links">
+                    <a href=""><i class="fa-brands fa-square-facebook"></i></a>
+                    <a href=""><i class="fa-brands fa-square-instagram"></i></a>
+               </div>
+            </div>
+        </div>
+        <div class="header_div">
+            <div class="logo"><a href="./index.html"><img class="logo_img" src="./assets/images/ethan_logistics_logo.png" alt="Our Logo"></a></div>
+                <ul class="main_nav">
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./about.html">About Us</a></li>
+                    <li><a href="./services.html">Services</a></li>
+                    <li><a href="#contact_section" class="active_nav">Contact Us</a></li>
+                    <li><button class="quote_btn">Get A Quote</button></li>
+                </ul>
+                <!-- Off Screen Menu -->
+                 <div class="offScreenMenu">
+                    <ul>
+                        <li><a href="./index.html">Home</a></li>
+                        &nbsp;
+                        <li><a href="./about.html">About Us</a></li>
+                        &nbsp;
+                        <li><a href="./services.html">Services</a></li>
+                        &nbsp;
+                        <li><a href="#contact_section" class="active_nav_ham">Contact</a></li>
+                        &nbsp;
+                        <li><button class="quote_btn_ham">Get A Quote</button></li>
+                    </ul>
+                 </div>
+                <!-- Ham Menu Icon-->
+                <div class="menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+        </div>
+    </header>
+
+    <!-- Pop-up form -->
+    <div id="quoteForm" class="popup_form" data-aos="fade-down" data-aos-duration="2000">
+        <div class="popup_content">
+            <span class="close_btn">&times;</span>
+            <h2>Get A Quote</h2>
+            <form action="/submit_quote" method="post">
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+                
+                <!-- Dropdown selection input -->
+                <select id="service" name="service" required>
+                    <option value="" disabled selected>Select a Service</option>
+                    <option value="national">National Transportation </option>
+                    <option value="cross">Cross Border Transport</option>
+                    <option value="short">Short Distance Haulage</option>
+                    <option value="long">Long Distance Haulage</option>
+                    <option value="taut">Taut Liners</option>
+                    <option value="specific">Specific Inquiry</option>
+                </select>
+                
+                <textarea id="message" name="message" placeholder="Your Message" rows="4" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+     <section id="hero_section_contact">
+        <div class="contact_hero_overlay">
+            <div class="contact_page">
+                <p class="contact_page_head">Contact Us</p>
+                <p class="contact_par">We'd love to hear from you! Please fill out the form below, <br>We'll get back to you as soon as possible.</p>
+            </div>
+        </div>
+     </section>
+
+     <section id="contact_location">
+        <div class="overall_container">
+            <div class="contact_location_head_container">
+                <p class="contact_location_head">Visit us Today!</p>
+            </div>
+            <div class="contact_location_container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15186.140649351455!2d30.994572292549986!3d-17.90717631081586!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1931a3bc6d853d85%3A0xf67ee87d9dcf253a!2sOcean%20Hybrid%20Pvt%20Ltd!5e0!3m2!1sen!2szw!4v1725620069808!5m2!1sen!2szw" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+     </section>
+
+     <!-- Contact Section -->
+     <section id="contact_section">
+         <div class="overall_container">
+             <div class="contact_grid_container contact_section_services_page">
+                 <div class="contact_details">
+                     <p class="contact_head">GET IN TOUCH</p>
+                     <p class="email"><a href=""><i class="fa-solid fa-envelope"></i> info@ethanlogistics.co.zw</a></p>
+                     <p class="address"><a href=""><i class="fa-solid fa-location-dot"></i> 77 Marlveen Waterfalls, Hre</a></p>
+                     <p class="address"><a href=""><i class="fa-solid fa-location-dot"></i>  4 Padyn Freeway Boksburg, Johannesburg, RSA</a></p>
+                     <p class="phone"><i class="fa-solid fa-phone"></i> +263 78 300 2822</p>
+                     <div class="social_media_platforms">
+                         <a href=""><i class="fa-brands fa-square-facebook"></i></a>
+                         <a href=""><i class="fa-brands fa-square-instagram"></i></a>
+                     </div>
+                 </div>
+                 <div class="form_container">
+                     <form id="contact_form" class="form">
+                         <input type="text" id="name" placeholder="Your Name" required>
+                         <input type="email" id="email" placeholder="Your Email" required>
+                         <textarea id="message" placeholder="Your Message" rows="6" required></textarea>
+                         <button type="submit" class="submit_btn">Submit</button>
+                     </form>
+                 </div>
+             </div>
+         </div>
+     </section>
+
+     <footer>
+         <div class="overall_container">
+             <div class="footer_links_container">
+                 <div class="logo">
+                     <a href="./index.html"><img class="logo_img" src="./assets/images/footer_logo.png" alt="Our Logo"></a>
+                     <p class="footer_company_details">Ethan Logistics is committed to providing leading haulage and logistics services throughout the region 
+                         of Southern Africa.</p>
+                 </div>
+                 <div class="footer_services">
+                     <a href="./services.html">National Transportation </a>
+                     <a href="./services.html">Cross Border Transport</a>
+                     <a href="./services.html">Short Distance Haulage</a>
+                     <a href="./services.html">Long Distance Haulage</a>
+                     <a href="./services.html">Taut Liners</a>
+                 </div>
+                 <div class="footer_about">
+                     <a href="./about.html">About Us</a>
+                     <a href="./contact.html">Contact</a>
+                 </div>
+             </div>
+             <div class="footer_social_platforms">
+                 <a href=""><i class="fa-brands fa-square-facebook"></i></a>
+                 <a href=""><i class="fa-brands fa-square-instagram"></i></a>
+             </div>
+         </div>
+     </footer>
+
+
+    <script src="./javascripts/main.js"></script>
+</body>
+</html>

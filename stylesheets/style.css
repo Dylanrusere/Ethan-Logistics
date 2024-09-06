@@ -199,6 +199,7 @@ header .logo{
 header .main_nav {
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
     margin-right: 5%;
 }
 
@@ -221,6 +222,28 @@ header .main_nav li a{
 header .main_nav li .active_nav{
     color: #3276B7;
     font-weight: 600;
+}
+
+.quote_btn{
+    cursor: pointer;
+    border: none;
+    background-color: #10243C;
+    color: #ffffff;
+    padding: 8% 4%;
+    margin-right: 65%;
+    width: 120px;
+    transition: 0.5s ease-in-out;
+
+
+    @media(max-width:900px){
+        display: none;
+    }
+}
+
+.quote_btn:hover{
+    background-color: transparent;
+    border: 1px solid #000;
+    color: #000;
 }
 
 
@@ -418,6 +441,109 @@ header.sticky .menu{
             }
         }
     }
+}
+
+.quote_btn_ham{
+    cursor: pointer;
+    border: none;
+    background-color: #ffffff;
+    color: #10243C;
+    padding: 4% 1% 4% 1%;
+    margin-top: 14%;
+    width: 120px;
+    transition: 0.5s ease-in-out;
+}
+
+.quote_btn_ham:hover{
+    background-color: transparent;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+}
+
+/* Pop-up form container */
+.popup_form {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: #10243c62;
+}
+
+/* Pop-up form content */
+.popup_content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 500px;
+
+    h2{
+        color: #10243C;
+    }
+}
+
+.popup_content form{
+    display: flex;
+    flex-direction: column;
+}
+
+.popup_content form input, select, textarea{
+    margin-top: 4%;
+}
+
+.popup_content form input{
+    width: 100%;
+    padding: 10px;
+    outline: none;
+}
+
+.popup_content form select{
+    width: 100%;
+    padding: 10px;
+    outline: none;
+}
+
+.popup_content form textarea{
+    width: 100%;
+    padding: 10px;
+    outline: none;
+}
+
+.popup_content form button{
+    margin-top: 4%;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: #10243C;
+    color: #fff;
+    transition: 0.5s ease-in-out;
+}
+
+.popup_content form button:hover{
+    background-color: transparent;
+    border: 1px solid #10243C;
+    color: #10243C;
+}
+
+/* Close button */
+.close_btn {
+    color: #aaa;
+    float: right;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close_btn:hover,
+.close_btn:focus {
+    color: #10243C;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 
@@ -1735,7 +1861,6 @@ footer{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 3%;
-    margin-top: 5%;
 
     @media(max-width:530px){
         grid-template-columns: 1fr;
@@ -1755,6 +1880,10 @@ footer{
 
 .footer_services a:hover, .footer_about a:hover{
     color: #ffffff;
+}
+
+.footer_company_details{
+    color: #ffffffb0;
 }
 
 /* About Page */
@@ -1941,6 +2070,95 @@ footer{
     margin-top: 3%;
 }
 
+/* Mission Vission Values */
+#company_mvv{
+    padding: 5% 0 8% 0;
+}
+
+.mvv_grid_container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5%;
+
+    @media(max-width:800px){
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media(max-width:550px){
+        grid-template-columns: 1fr;
+    }
+}
+
+.mission_container, .vision_container, .values_container{
+    text-align: center;
+
+    i{
+        font-size: 40px;
+        margin-bottom: 2%;
+        color: #3276B7;
+    }
+
+    .mvv_head{
+        font-weight: 600;
+        font-size: 20px;
+        color: #3276B7;
+        margin-bottom: 2%;
+    }
+}
+
+.values_container{
+
+
+    @media(max-width:800px){
+        width: 200%;
+    }
+
+    @media(max-width:550px){
+        width: 100%;
+    }
+}
+/* Staff */
+#staff{
+    padding: 5% 0;
+}
+
+.staff_grid_container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    @media(max-width:650px){
+        grid-template-columns: 1fr;
+    }
+}
+
+.staff_img_container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    img{
+        width: 100%;
+    }
+}
+
+.staff_text_container{
+    padding: 0 3% 5% 3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.staff_head{
+    font-weight: 800;
+    color: #10243C;
+    margin-bottom: 2%;
+
+
+    span{
+        color: #3276B7;
+    }
+}
+
 /* Services Page */
 #services_services_page{
     padding: 5% 0;
@@ -2006,4 +2224,54 @@ footer{
 
 .contact_section_services_page{
     margin-top: 5%;
+}
+
+/* Contact Page */
+#hero_section_contact{
+    width: 100%;
+    height: 70vh;
+    background-image: url(../assets/images/ethan-img-3.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.contact_page{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact_hero_overlay{
+    width: 100%;
+    height: 70vh;
+    background-color: #10243ca6;
+}
+
+.contact_page_head{
+    font-weight: 600;
+    font-size: 30px;
+    color: #ffffff;
+}
+
+.contact_par{
+    color: #ffffff;
+    text-align: center;
+}
+
+#contact_location{
+    padding: 5% 0;
+}
+
+.contact_location_head{
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 2%;
+}
+
+.contact_location_container{
+    width: 100%;
+    height: 50vh;
 }

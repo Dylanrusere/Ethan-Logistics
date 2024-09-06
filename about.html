@@ -36,7 +36,8 @@
                     <li><a href="./index.html">Home</a></li>
                     <li><a href="./about.html" class="active_nav">About Us</a></li>
                     <li><a href="./services.html">Services</a></li>
-                    <li><a href="#contact_section">Contact Us</a></li>
+                    <li><a href="./contact.html">Contact Us</a></li>
+                    <li><button class="quote_btn">Get A Quote</button></li>
                 </ul>
                 <!-- Off Screen Menu -->
                  <div class="offScreenMenu">
@@ -47,7 +48,9 @@
                         &nbsp;
                         <li><a href="./services.html">Services</a></li>
                         &nbsp;
-                        <li><a href="#contact_section">Contact</a></li>
+                        <li><a href="./contact.html">Contact</a></li>
+                        &nbsp;
+                        <li><button class="quote_btn_ham">Get A Quote</button></li>
                     </ul>
                  </div>
                 <!-- Ham Menu Icon-->
@@ -58,6 +61,32 @@
                 </div>
         </div>
     </header>
+
+    <!-- Pop-up form -->
+    <div id="quoteForm" class="popup_form" data-aos="fade-down" data-aos-duration="2000">
+        <div class="popup_content">
+            <span class="close_btn">&times;</span>
+            <h2>Get A Quote</h2>
+            <form action="/submit_quote" method="post">
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+                
+                <!-- Dropdown selection input -->
+                <select id="service" name="service" required>
+                    <option value="" disabled selected>Select a Service</option>
+                    <option value="national">National Transportation </option>
+                    <option value="cross">Cross Border Transport</option>
+                    <option value="short">Short Distance Haulage</option>
+                    <option value="long">Long Distance Haulage</option>
+                    <option value="taut">Taut Liners</option>
+                    <option value="specific">Specific Inquiry</option>
+                </select>
+                
+                <textarea id="message" name="message" placeholder="Your Message" rows="4" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
     
     <!-- Hero Section -->
      <section id="hero_section">
@@ -120,6 +149,32 @@
         </div>
      </section>
 
+     <!-- Company Mission, Vision & Values -->
+      <section id="company_mvv">
+        <div class="overall_container">
+            <div class="mvv_grid_container">
+                <div class="mission_container">
+                    <i class="fa-solid fa-bullseye"></i>
+                    <p class="mvv_head">MISSION</p>
+                    <p class="mvv_text">To become the most successful haulage transportation company with
+                        a positive impact on the customers we serve, the environment we share 
+                       and increased revenues to our employees and stakeholders we support.</p>
+                </div>
+                <div class="vision_container">
+                    <i class="fa-solid fa-eye-low-vision"></i>
+                    <p class="mvv_head">VISION</p>
+                    <p class="mvv_text">To provide superior customer service, exercise a positive impact on the community,
+                        environment and to produce world class employees that represent our organization.</p>
+                </div>
+                <div class="values_container">
+                    <i class="fa-solid fa-heart"></i>
+                    <p class="mvv_head">CORE VALUES</p>
+                    <p class="mvv_text">Transparency <br> Integrity Customer <br> satisfaction <br> Professionalism</p>
+                </div>
+            </div>
+        </div>
+      </section>
+
      <!-- Clients -->
      <section id="clients">
         <div class="overall_container">
@@ -168,6 +223,25 @@
             </div>
         </div>
     </section>
+
+    <!-- Staff -->
+     <section id="staff">
+        <div class="staff_grid_container">
+            <div class="staff_img_container">
+                <img src="./assets/images/staff-2.png" alt="">
+            </div>
+            <div class="staff_text_container">
+                <p class="staff_head">OUR <span>STAFF</span></p>
+                <p class="staff_par"> Our staff is key assets and we pay a lot of attention to their well-being. All drivers are intensely evaluated 
+                    and tested on his driving skills and re-evaluated on a regular basis. Our fleet is on 24-hour surveillance. 
+                    Every vehicle is fully equipped with a reliable driver,tracker system and cameras to identify movement, 
+                    route, speed and stops at all times. All this information ensures that our fleet controllers know exactly 
+                    where each vehicle is and to prevent or anticipate any potential problems. We make use of reliable 
+                    clearing agents to supply, the necessary and correct cross border documentation to prevent any delays 
+                    or difficulties while crossing the borders.</p>
+            </div>
+        </div>
+     </section>
 
     <!-- Services -->
     <section id="services">
@@ -263,6 +337,107 @@
         </div>
      </section>
 
+     <!-- Why Choose Us -->
+      <section id="why_choose_us">
+            <div class="why_grid_container">
+                <div class="why_img">
+                        <img src="./assets/images/mission.png" alt="">
+                </div>
+                <div class="why_text">
+                    <div class="why_text_container">
+                        <p class="why_text_head">Why Choose Us?</p>
+                        <div class="reason_wrapper"><i class="fa-solid fa-square-check"></i><p class="reasons">We are reliable</p></div>
+                        <div class="reason_wrapper"><i class="fa-solid fa-square-check"></i><p class="reasons">We are passionate about what we do</p></div>
+                        <div class="reason_wrapper"><i class="fa-solid fa-square-check"></i><p class="reasons">We have a good reputation</p></div>
+                        <div class="reason_wrapper"><i class="fa-solid fa-square-check"></i><p class="reasons">We are concerned about safety</p></div>
+                        <div class="reason_wrapper"><i class="fa-solid fa-square-check"></i><p class="reasons">We have excellent staff and facilities</p></div>
+                    </div>
+                </div>
+            </div>
+      </section>
+
+     <!-- Testimonials -->
+      <section id="testimonials">
+           <div class="overall_container">
+                   <div class="feedback">
+                       <p class="testimonials_head">TESTIMONIALS</p>
+                       <p class="feedback_par">Feedback from our Customers</p>
+                   </div>
+                   <div class="testimonial-container">
+                       <div class="testimonial-carousel">
+                           <div class="testimonial active">
+                               <div class="testimonial-content">
+                                   <div class="test-image">
+                                       <img src="./assets/images/testimonial-2.png" alt="Kate Rogers" class="testimonial-image">
+                                   </div>
+                                   <div class="testimonial-text">
+                                       <p>Kate Rogers - <span>CEO AfriSpace</span></p>
+                                   </div>
+                               </div>
+                               <p class="testimonial-description">Ethan Logistics has been our go-to partner for all our shipping needs. Their team is always professional, and our goods arrive on time, every time. Highly recommended for anyone looking for dependable logistics services!</p>
+                           </div>
+                           <div class="testimonial active">
+                               <div class="testimonial-content">
+                                   <div class="test-image">
+                                       <img src="./assets/images/testimonial-1.png" alt="Kate Rogers" class="testimonial-image">
+                                   </div>
+                                   <div class="testimonial-text">
+                                       <p>Mr Brian T - <span>CEO, Eight Tech</span></p>
+                                   </div>
+                               </div>
+                               <p class="testimonial-description">We’ve worked with many logistics companies, but Ethan Logistics stands out for their exceptional customer service. They’re responsive, friendly, and always go the extra mile to ensure our needs are met.</p>
+                           </div>
+                           <div class="testimonial active">
+                               <div class="testimonial-content">
+                                   <div class="test-image">
+                                       <img src="./assets/images/testimonial-2.png" alt="Kate Rogers" class="testimonial-image">
+                                   </div>
+                                   <div class="testimonial-text">
+                                       <p>Sarah P  - <span>CEO, TechX Solutions</span></p>
+                                   </div>
+                               </div>
+                               <p class="testimonial-description">Ethan Logistics offers an impressive balance of speed and cost-effectiveness. Their shipping solutions helped us streamline our supply chain and cut down on delivery times without breaking the bank</p>
+                           </div>
+                           <div class="testimonial active">
+                               <div class="testimonial-content">
+                                   <div class="test-image">
+                                       <img src="./assets/images/testimonial-1.png" alt="Kate Rogers" class="testimonial-image">
+                                   </div>
+                                   <div class="testimonial-text">
+                                       <p>Mike R - <span>Supply Chain Director, Global Goods Inc</span></p>
+                                   </div>
+                               </div>
+                               <p class="testimonial-description">Ethan Logistics has played a critical role in the growth of our business. With their efficient transportation and warehousing services, we’ve been able to expand into new markets seamlessly.</p>
+                           </div>
+                           <div class="testimonial active">
+                               <div class="testimonial-content">
+                                   <div class="test-image">
+                                       <img src="./assets/images/testimonial-2.png" alt="Kate Rogers" class="testimonial-image">
+                                   </div>
+                                   <div class="testimonial-text">
+                                       <p>Emily K - <span>Business Development Lead, EcoWare</span></p>
+                                   </div>
+                               </div>
+                               <p class="testimonial-description">We have complex logistics requirements, but Ethan Logistics always manages to adapt to our changing needs. Their flexibility and problem-solving skills are second to none.</p>
+                           </div>
+                           <div class="testimonial active">
+                               <div class="testimonial-content">
+                                   <div class="test-image">
+                                       <img src="./assets/images/testimonial-1.png" alt="Kate Rogers" class="testimonial-image">
+                                   </div>
+                                   <div class="testimonial-text">
+                                       <p> David T - <span> Logistics Coordinator, Bright Future Electronics</span></p>
+                                   </div>
+                               </div>
+                               <p class="testimonial-description">For years, we’ve trusted Ethan Logistics with our international shipments. They handle everything with precision, from documentation to customs clearance, making our job easier and stress-free.</p>
+                           </div>
+                       </div>
+                       <button class="carousel-control prev" onclick="prevTestimonial()"><i class="fa-solid fa-arrow-left"></i></button>
+                       <button class="carousel-control next" onclick="nextTestimonial()"><i class="fa-solid fa-arrow-right"></i></button>
+                   </div>
+           </div>
+      </section>
+
      <!-- Call To Action -->
      <section id="call_to_action">
         <div class="overlay_call_to_action">
@@ -275,95 +450,15 @@
         </div>
     </section>
 
-    <!-- Testimonials -->
-     <section id="testimonials">
-          <div class="overall_container">
-                  <div class="feedback">
-                      <p class="testimonials_head">TESTIMONIALS</p>
-                      <p class="feedback_par">Feedback from our Customers</p>
-                  </div>
-                  <div class="testimonial-container">
-                      <div class="testimonial-carousel">
-                          <div class="testimonial active">
-                              <div class="testimonial-content">
-                                  <div class="test-image">
-                                      <img src="./assets/images/testimonial-2.png" alt="Kate Rogers" class="testimonial-image">
-                                  </div>
-                                  <div class="testimonial-text">
-                                      <p>Kate Rogers - <span>CEO AfriSpace</span></p>
-                                  </div>
-                              </div>
-                              <p class="testimonial-description">Ethan Logistics has been our go-to partner for all our shipping needs. Their team is always professional, and our goods arrive on time, every time. Highly recommended for anyone looking for dependable logistics services!</p>
-                          </div>
-                          <div class="testimonial active">
-                              <div class="testimonial-content">
-                                  <div class="test-image">
-                                      <img src="./assets/images/testimonial-1.png" alt="Kate Rogers" class="testimonial-image">
-                                  </div>
-                                  <div class="testimonial-text">
-                                      <p>Mr Brian T - <span>CEO, Eight Tech</span></p>
-                                  </div>
-                              </div>
-                              <p class="testimonial-description">We’ve worked with many logistics companies, but Ethan Logistics stands out for their exceptional customer service. They’re responsive, friendly, and always go the extra mile to ensure our needs are met.</p>
-                          </div>
-                          <div class="testimonial active">
-                              <div class="testimonial-content">
-                                  <div class="test-image">
-                                      <img src="./assets/images/testimonial-2.png" alt="Kate Rogers" class="testimonial-image">
-                                  </div>
-                                  <div class="testimonial-text">
-                                      <p>Sarah P  - <span>CEO, TechX Solutions</span></p>
-                                  </div>
-                              </div>
-                              <p class="testimonial-description">Ethan Logistics offers an impressive balance of speed and cost-effectiveness. Their shipping solutions helped us streamline our supply chain and cut down on delivery times without breaking the bank</p>
-                          </div>
-                          <div class="testimonial active">
-                              <div class="testimonial-content">
-                                  <div class="test-image">
-                                      <img src="./assets/images/testimonial-1.png" alt="Kate Rogers" class="testimonial-image">
-                                  </div>
-                                  <div class="testimonial-text">
-                                      <p>Mike R - <span>Supply Chain Director, Global Goods Inc</span></p>
-                                  </div>
-                              </div>
-                              <p class="testimonial-description">Ethan Logistics has played a critical role in the growth of our business. With their efficient transportation and warehousing services, we’ve been able to expand into new markets seamlessly.</p>
-                          </div>
-                          <div class="testimonial active">
-                              <div class="testimonial-content">
-                                  <div class="test-image">
-                                      <img src="./assets/images/testimonial-2.png" alt="Kate Rogers" class="testimonial-image">
-                                  </div>
-                                  <div class="testimonial-text">
-                                      <p>Emily K - <span>Business Development Lead, EcoWare</span></p>
-                                  </div>
-                              </div>
-                              <p class="testimonial-description">We have complex logistics requirements, but Ethan Logistics always manages to adapt to our changing needs. Their flexibility and problem-solving skills are second to none.</p>
-                          </div>
-                          <div class="testimonial active">
-                              <div class="testimonial-content">
-                                  <div class="test-image">
-                                      <img src="./assets/images/testimonial-1.png" alt="Kate Rogers" class="testimonial-image">
-                                  </div>
-                                  <div class="testimonial-text">
-                                      <p> David T - <span> Logistics Coordinator, Bright Future Electronics</span></p>
-                                  </div>
-                              </div>
-                              <p class="testimonial-description">For years, we’ve trusted Ethan Logistics with our international shipments. They handle everything with precision, from documentation to customs clearance, making our job easier and stress-free.</p>
-                          </div>
-                      </div>
-                      <button class="carousel-control prev" onclick="prevTestimonial()"><i class="fa-solid fa-arrow-left"></i></button>
-                      <button class="carousel-control next" onclick="nextTestimonial()"><i class="fa-solid fa-arrow-right"></i></button>
-                  </div>
-          </div>
-     </section>
-   <!-- Contact Section -->
+    <!-- Contact Section -->
     <section id="contact_section">
         <div class="overall_container">
-            <div class="contact_grid_container">
+            <div class="contact_grid_container contact_section_services_page">
                 <div class="contact_details">
                     <p class="contact_head">GET IN TOUCH</p>
                     <p class="email"><a href=""><i class="fa-solid fa-envelope"></i> info@ethanlogistics.co.zw</a></p>
                     <p class="address"><a href=""><i class="fa-solid fa-location-dot"></i> 77 Marlveen Waterfalls, Hre</a></p>
+                    <p class="address"><a href=""><i class="fa-solid fa-location-dot"></i>  4 Padyn Freeway Boksburg, Johannesburg, RSA</a></p>
                     <p class="phone"><i class="fa-solid fa-phone"></i> +263 78 300 2822</p>
                     <div class="social_media_platforms">
                         <a href=""><i class="fa-brands fa-square-facebook"></i></a>
@@ -384,24 +479,27 @@
 
     <footer>
         <div class="overall_container">
-            <div class="footer_social_platforms">
-                <a href=""><i class="fa-brands fa-square-facebook"></i></a>
-                <a href=""><i class="fa-brands fa-square-instagram"></i></a>
-            </div>
             <div class="footer_links_container">
                 <div class="logo">
                     <a href="./index.html"><img class="logo_img" src="./assets/images/footer_logo.png" alt="Our Logo"></a>
+                    <p class="footer_company_details">Ethan Logistics is committed to providing leading haulage and logistics services throughout the region 
+                        of Southern Africa.</p>
                 </div>
                 <div class="footer_services">
-                    <a href="">Local Moving</a>
-                    <a href="">Land Transport</a>
-                    <a href="">Local Moving</a>
-                    <a href="">Land Transport</a>
+                    <a href="./services.html">National Transportation </a>
+                    <a href="./services.html">Cross Border Transport</a>
+                    <a href="./services.html">Short Distance Haulage</a>
+                    <a href="./services.html">Long Distance Haulage</a>
+                    <a href="./services.html">Taut Liners</a>
                 </div>
                 <div class="footer_about">
-                    <a href="">About Us</a>
-                    <a href="">Contact</a>
+                    <a href="./about.html">About Us</a>
+                    <a href="./contact.html">Contact</a>
                 </div>
+            </div>
+            <div class="footer_social_platforms">
+                <a href=""><i class="fa-brands fa-square-facebook"></i></a>
+                <a href=""><i class="fa-brands fa-square-instagram"></i></a>
             </div>
         </div>
     </footer>
